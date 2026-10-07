@@ -18,6 +18,7 @@ db.connect();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
+// part 1
 app.get("/", async (req, res) => {
   //Write your code here.
 const result = await db.query("SELECT country_code FROM visited_countries");
